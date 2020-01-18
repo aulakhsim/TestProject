@@ -3,6 +3,9 @@
 
 <suite name="TestingWebSite">
 
+	<listeners>
+		<listener class-name="com.testingwebsite.uilities.Reporting"/>
+	</listeners>
 	
 	<test name="BankingApp Test">
 		<parameter name="browser" value="chrome" />
