@@ -23,5 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/aulak/Desktop/selenium/selenium-java-3.141.59/client-combined-3.141.59.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
