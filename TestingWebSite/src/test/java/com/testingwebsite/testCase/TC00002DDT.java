@@ -33,7 +33,7 @@ public class TC00002DDT extends BaseClass
 		   Assert.assertTrue(true);
 		   Logger.info("Login passed");
 		   lp.ClickLogout();
-		   driver.switchTo().alert().accept();//close logout alert
+		   driver.switchTo().alert().accept();//close logout Alert
 		   driver.switchTo().defaultContent();
 	   }
    }
