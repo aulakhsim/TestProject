@@ -1,5 +1,9 @@
 package com.testingwebsite.testCase;
 
+import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,7 +11,7 @@ import com.testingwebsite.pageObjects.LoginPage;
 
 public class TC00001 extends BaseClass {
 	@Test
-	public void loginTest() 
+	public void loginTest() throws IOException, InterruptedException
 	{
 		driver.get(baseURL);
 		Logger.info("URL is Opened");
@@ -22,15 +26,23 @@ public class TC00001 extends BaseClass {
 		Logger.info("Click Submit button ");
 		lp.clickSubmit();
 		
+		//String actualTitle = driver.getTitle();
+		//String expectedTitle = "Title of Page";
+		//assertEquals(expectedTitle,actualTitle);
 		
-		if (driver.getTitle().equals("Guru99 Bank Manager HomePage"))
+		//Thread.sleep(7000);
+		
+		if (driver.getTitle().equals("GTPL Bank Manager HomePage"))
+		
 		{
 			Assert.assertTrue(true);
 		}
-	//	else
-		//{
-		//	Assert.assertTrue(false);
-	//	}
+	else
+	{
+		captureScreen(driver,"loginTest");
+		Assert.assertTrue(false);
+		Logger.info("Login test failed");
+		}
 		
 	}
 	

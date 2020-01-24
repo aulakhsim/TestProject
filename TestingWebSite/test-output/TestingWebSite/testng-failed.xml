@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestingWebSite]">
+  <listeners>
+    <listener class-name="com.testingwebsite.uilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="BankingApp Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.testingwebsite.testCase.TC00001">
         <methods>
@@ -11,5 +15,5 @@
         </methods>
       </class> <!-- com.testingwebsite.testCase.TC00001 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- BankingApp Test(failed) -->
+</suite> <!-- Failed suite [TestingWebSite] -->
